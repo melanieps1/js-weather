@@ -1,0 +1,14 @@
+.container {
+	max-width: 500px;
+	border: solid 1px black;
+}
+
+h1 {
+	text-align: center;
+}
+
+#inputForm {
+	margin-bottom: 24px;
+	margin-top: 24px;
+	text-align: center;  /*This isn't the best solution, come back to it later*/
+}
