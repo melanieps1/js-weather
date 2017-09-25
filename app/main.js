@@ -8,7 +8,8 @@ var temperatureOutputK = document.getElementById("temperatureOutputK");
 var temperatureOutputF = document.getElementById("temperatureOutputF");
 var temperatureOutputC = document.getElementById("temperatureOutputC");
 var cityOutput = document.getElementById("cityOutput");
-var conditionOutput = document.getElementById("conditionOutput")
+var conditionOutput = document.getElementById("conditionOutput");
+var weatherImage = document.getElementById("weatherImage");
 
 var apiRequest;
 
@@ -65,6 +66,16 @@ function parseResponse() {
 	cityOutput.innerHTML = results.name;
 	
 	conditionOutput.innerHTML = results.weather[0].description;
+
+	if (tempF > 85) {
+		weatherImage.src = "https://i.pinimg.com/originals/83/e8/cc/83e8cca4c99f41f2512832ceac5be321.jpg";
+	} else if (tempF > 65) {
+		weatherImage.src = "http://ghk.h-cdn.co/assets/16/29/980x490/landscape-1468881327-smiling-pitbull.jpg";
+	} else if (tempF > 32) {
+		weatherImage.src = "https://dogbreathblog.files.wordpress.com/2012/10/363c5215-editlogo.jpg?w=914&h=609";
+	} else {
+		weatherImage.src = "https://16347-presscdn-0-0-pagely.netdna-ssl.com/wp-content/uploads/2017/04/tangomunch_pitbull8-720x720.png";
+	}
 }
 
 function httpRequestOnError() {
