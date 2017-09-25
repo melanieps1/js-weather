@@ -12,3 +12,7 @@ h1 {
 	margin-top: 24px;
 	text-align: center;  /*This isn't the best solution, come back to it later*/
 }
+
+th, td {
+	text-align: center;
+}
